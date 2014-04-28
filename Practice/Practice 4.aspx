@@ -25,5 +25,13 @@
             </li>
         </ul>
     </div>
+    <hr />
+    <div data-ng-init="employees = [ { name: 'Abu Ali Muhammad Sharjeel', mobile:'+966508991841'}, { name: 'Abu Gosia Shahzad Attari', mobile: '+923343439012'}, { name: 'Gosia Attaria', mobile: ''}, { name: 'Fatima Attaria', mobile: ''}, { name: 'Javeria Attaria', mobile: ''} ]">
+        <h4>Wayzsoft Team ;)</h4>
+        Search by: <input type="text" data-ng-model="search" />
+        <ol>
+            <li data-ng-repeat="emp in employees | filter: search | orderBy:name">{{emp.name}} | {{emp.mobile}}</li>
+        </ol>
+    </div>
 </body>
 </html>

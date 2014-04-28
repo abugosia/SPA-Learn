@@ -20,7 +20,7 @@
         Search : <br/>
         <input type="text" data-ng-model="searchText"/>
         <ul>
-            <li data-ng-repeat="customer in customers | filter:searchText | orderBy: 'name'"></li>
+            <li data-ng-repeat="customer in customers | filter:searchText | orderBy: 'name'">{{customer.name}} | {{customer.city}}</li>
         </ul>
     </div>
 </body>
